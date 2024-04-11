@@ -5,9 +5,7 @@
 1. Review the practice lab objectives in the Concept section below.
 2. Click Start Lab to provision your environment, and then click Open AWS Console to begin.
 3. Follow the lab instructions carefully, and use the arrows below to navigate between steps.
-       - you can skip the Step 1
-
-
+    - you can skip the Step 1
 
 ---
 
