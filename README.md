@@ -1,152 +1,164 @@
 # AWS RDS Lab Setup Guide
 
-## Step : 1
+## Step 1: Review Objectives and Start Lab
+
 1. Review the practice lab objectives in the Concept section below.
 2. Click Start Lab to provision your environment, and then click Open AWS Console to begin.
-3. Follow the lab instructions carefully, and use the arrows below to   navigate between steps.
-
-    AWS services not used in this lab are disabled in the lab environment. In addition, the capabilities of the services used in this lab are limited to what the lab requires.
+3. Follow the lab instructions carefully, and use the arrows below to navigate between steps.
 
 
-## Step : 2
+---
 
-1. In the top navigation bar search box, type:
+## Step 2: Search for RDS in AWS Console
 
-    ```
-    rds
-    ```
-2. In the search results, under Services, click RDS. 
+1. In the top navigation bar search box, type `rds`.
+2. In the search results, under Services, click RDS.
 3. Go to the next step.
 
-## Step : 3
+    ![alt text](<Screenshot from 2024-04-11 21-14-23.png>)
+
+---
+
+## Step 3: Navigate to Databases
 
 1. In the left navigation pane, click Databases.
 2. In the Databases section, click Create database.
 3. Go to the next step.
 
-## Step : 4
+    ![alt text](<Screenshot from 2024-04-11 21-14-46.png>)
 
-1. To fine-tune your configuration, for Choose a database creation method,  choose Standard create.
+---
+
+## Step 4: Choose Database Creation Method
+
+1. Choose Standard create for database creation method.
 2. For Engine type, choose MariaDB.
 3. Go to the next step.
 
-## Step : 5
+    ![alt text](<Screenshot from 2024-04-11 21-15-36.png>)
 
-1. For Engine Version, keep the default MariaDB version provided.
+---
 
-- The default version might be different from what is displayed in the screenshot example.
+## Step 5: Select Configuration Options
 
-2. For Templates, choose Dev/Test.
+1. Keep the default MariaDB version.
+2. Choose Dev/Test for Templates.
 3. Go to the next step.
 
-## Step : 6
+    ![alt text](<Screenshot from 2024-04-11 21-16-09.png>)
 
-1. For DB instance identifier, type:
+---
 
-    ```
-    my-database
-    ```
+## Step 6: Configure DB Instance
 
-- This is the name of your DB instance.
-
-2. For Master username, keep the default username of admin.
-3. For Credentials management, choose Self managed.
-4. For Master password, type:
-
-    ```
-    ILoveLearning!123
-    ```
-5. For Confirm password, type the password again.
-6. Go to the next step.
-
-## Step : 7
-
-1. Scroll down to Instance configuration.
-2. For DB Instance class, choose Burstable classes.
-3. On the dropdown menu below that, choose db.t3.xlarge.
-
-- Only t3 db classes are supported in this lab. 
-
-4. For Storage type, on the dropdown menu, choose General Purpose SSD (gp2).
-5. For Allocated storage, type:
-
-    ```
-    20
-    ```
-6. Go to the next step.
-
-## Step : 8
-
-1. For Storage autoscaling, click the expand arrow.
-2. Review the default option of Enable storage autoscaling.
-3. For Maximum storage threshold, review the default threshold of 1000 GiB.
-4. Under Availability & durability, for Multi-AZ deployment, choose Create a standby instance.
+1. Set DB instance identifier to `my-database`.
+2. Keep the default username of admin for Master username.
+3. Choose Self managed for Credentials management.
+4. Set Master password to `ILoveLearning!123`.
 5. Go to the next step.
 
-## Step : 9
+    ![alt text](<Screenshot from 2024-04-11 21-18-47.png>)
 
-1. In the Connectivity section, for Virtual private cloud (VPC), keep the default value of Default VPC.
-2. For DB subnet group, keep the default setting.
-3. For Public access, keep the default setting.
-4. For VPC security group (firewall), keep the default setting.
+---
+
+## Step 7: Configure Instance Settings
+
+1. Choose Burstable classes for DB Instance class.
+2. Choose db.t3.xlarge from the dropdown menu.
+3. Choose General Purpose SSD (gp2) for Storage type.
+4. Set Allocated storage to `20`.
 5. Go to the next step.
 
-## Step : 10
+    ![alt text](<Screenshot from 2024-04-11 21-19-54-1.png>)
 
-1. In the Monitoring section, for Performance Insights, clear the check box to deselect Turn on Performance Insights.
-2. For Additional configuration, click the expand arrow.
-3. For Enhanced Monitoring, clear the check box to deselect Enable Enhanced monitoring.
+---
 
-    - If either Performance Insights or Enhanced monitoring are enabled, you'll get a permissions error when trying to create the database.
+## Step 8: Storage Autoscaling and Multi-AZ Deployment
 
-4. Scroll down to the Additional configuration section.
-5. Go to the next step.
+1. Expand Storage autoscaling and review default settings.
+2. Choose Create a standby instance for Multi-AZ deployment.
+3. Go to the next step.
 
-## Step : 11
+    ![alt text](<Screenshot from 2024-04-11 21-21-01-1.png>)
 
-1. In the Additional configuration section, for Additional configuration, click the expand arrow.
-2. For Initial database name, type:
+---
 
-    ```
-    my_database
-    ```
-3. For DB parameter group and Option group, review the default options.
-4. Under Backup, review the default options.
-5. Go to the next step.
+## Step 9: Configure Connectivity
 
-## Step : 12
+1. Keep default values for VPC and DB subnet group.
+2. Keep default settings for Public access and VPC security group.
+3. Go to the next step.
 
-1. In the Additional configuration section, for Encryption, review the default option of Enable encryption.
+    ![alt text](<Screenshot from 2024-04-11 21-23-12.png>)
+
+---
+
+## Step 10: Monitoring and Additional Configuration
+
+1. Clear the check box for Performance Insights.
+2. Clear the check box for Enhanced Monitoring.
+3. Go to the next step.
+
+    ![alt text](<Screenshot from 2024-04-11 21-24-07-1.png>)
+
+---
+
+## Step 11: Additional Configuration
+
+1. Set Initial database name to `my_database`.
+2. Review default options for DB parameter group, Option group, and Backup.
+3. Go to the next step.
+
+    ![alt text](<Screenshot from 2024-04-11 21-25-07.png>)
+
+---
+
+## Step 12: Encryption
+
+1. Review default option of Enable encryption.
 2. Go to the next step.
 
-## Step : 13
+    ![alt text](<Screenshot from 2024-04-11 21-25-45.png>)
 
-1. For Maintenance, clear the check box to deselect Enable auto minor version upgrade.
-2. For Maintenance window, review the default selection of No preference.
-3. Scroll down and click Create database (not shown).
+---
+
+## Step 13: Maintenance Settings
+
+1. Clear the check box for Enable auto minor version upgrade.
+2. Review default selection for Maintenance window.
+3. Scroll down and click Create database.
 4. Go to the next step.
 
-## Step : 14
+    ![alt text](<Screenshot from 2024-04-11 21-26-18.png>)
 
-- Expect about 15–20 minutes to create your RDS DB instance. It's a  great time to get a cup of coffee or a snack!
-    
-- You may see a pop-up window. Please close it.
+---
 
-1. When you return, in the Databases section, click the refresh icon.
-2. Under Status, review to ensure that the DB status is Available. 
+## Step 14: Database Creation in Progress
+
+- Expect about 15–20 minutes for creation.
+- Close any pop-up windows.
+
+1. After waiting, refresh the Databases section.
+2. Check that DB status is Available.
 3. Click my-database.
 4. Go to the next step.
 
-## Step : 15
+    ![alt text](<Screenshot from 2024-04-11 21-34-18.png>)
+
+---
+
+## Step 15: Database Management Options
 
 1. Click Actions to expand the dropdown menu.
 2. Review the different options.
-
-    - These options, such as Create read replica, can be used to manage your existing DB instance.
-
 3. Go to the next step.
 
-## Step : 16
+    ![alt text](<Screenshot from 2024-04-11 21-46-07-1.png>)
 
-Congratulations! You've completed the Practice section. Go to the DIY section to complete the solution.
+---
+
+## Step 16: Practice Completed!
+
+Congratulations on completing the Practice section! Proceed to the DIY section to reinforce your knowledge.
+
 
